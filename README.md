@@ -1,25 +1,19 @@
-# ReduxSimpleStarter
-
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+# League of Legends Client
 
 ### Getting Started
 
-There are two methods for getting started with this repo.
+This is a simple react js project using the riot league of legends api.
 
-#### Familiar with Git?
+### Project Url
+https://league-client.firebaseapp.com/
+
+#### Technologies used
 Checkout this repo, install dependencies, then start the gulp process with the following:
 
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
+> React JS
+> Redux
+> Redux-Thunk
+> Material UI
 ```
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
