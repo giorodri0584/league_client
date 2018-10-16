@@ -42,6 +42,7 @@ class ChampionList extends Component{
         };
 
         this.filterChampions = this.filterChampions.bind(this);
+        this.searchChampion = this.searchChampion.bind(this);
     }
     renderChampion(){
         const classes = this.props.classes;
@@ -75,7 +76,9 @@ class ChampionList extends Component{
 
     searchChampion(event){
         event.preventDefault();
-        this.props.searchChampion(event.target.value);
+        if(event.target.value){
+            this.props.searchChampion(event.target.value.toLowerCase());
+        }
     }
     filterChampions(type){
         this.props.filterType(type);
@@ -87,12 +90,12 @@ class ChampionList extends Component{
             <div>
                 <Grid container justify="center">
                     <Grid item sx={12} sm={6}>
-                        <form>
+                        <form onSubmit={this.searchChampion}>
                             <TextField
                                 id="outlined-name"
-                                label="Name"
+                                label="Champion's Name"
                                 className={classes.textField}
-                                onChange={this.searchChampion.bind(this)}
+                                onChange={this.searchChampion}
                                 margin="normal"
                                 variant="outlined"
                                 fullWidth
